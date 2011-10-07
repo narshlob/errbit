@@ -7,7 +7,7 @@
   = @problem.where
   %br
   %strong Environment:
-  = @problem.environment
+  = link_to @problem.environment, app_path(@problem.app, :environment => @problem.environment)
   %strong Last Notice:
   = last_notice_at(@problem).to_s(:micro)
 - content_for :action_bar do
